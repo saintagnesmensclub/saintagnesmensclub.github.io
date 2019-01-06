@@ -2,17 +2,26 @@
 layout: default
 ---
 
+<div class="about">
+    The Saint Agnes Men's Club meets every third Wednesday of the month at 6:30 PM. All men of the parish are welcome.
+</div>
+
 <div class="posts">
-  {% for post in site.posts %}
+    {% assign post = site.posts.first %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+        <div class="entry">
+        {{ post.content }}
+        </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        <div class="date">
+            Written on {{ page.date | date: "%B %e, %Y" }}
+        </div>
     </article>
-  {% endfor %}
+</div>
+
+<div class="calendar">
+    <iframe src="https://calendar.google.com/calendar/embed?title=Upcoming%20Events%3A&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=st.agnes.mens.club%40gmail.com&amp;color=%235229A3&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
