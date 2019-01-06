@@ -11,6 +11,27 @@ description: Serving Saint Agnes Church and School since 1935
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 #avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+prose:
+  metadata:
+    _posts:
+      - name: "date"
+        field:
+          element: "hidden"
+          value: CURRENT_DATETIME
+      - name: "published"
+        field:
+          element: "hidden"
+          value: true
+      - name: "title"
+        field:
+          element: "text"
+          label: "títle"
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "published"
+          value: "true"
+
 #
 # Flags below are optional
 #
