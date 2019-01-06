@@ -16,9 +16,11 @@ layout: default
         {{ post.content }}
         </div>
 
-        <div class="date">
-            Written on {{ page.date | date: "%B %e, %Y" }}
-        </div>
+        {% if post.date %}
+            <div class="date">
+                Written on {{ post.date | date: "%B %e, %Y" }}
+            </div>
+        {% endif %}
     </article>
 </div>
 
