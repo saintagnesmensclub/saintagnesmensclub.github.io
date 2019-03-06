@@ -8,7 +8,10 @@ published: true
 </div>
 
 <div class="posts">
-    {% assign post = site.posts.first %}
+{% comment %}    {% assign post = site.posts.first %}{% endcomment %}
+  {% assign post = false %}
+  
+  {% if post %}
     <article class="post">
 
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -23,6 +26,7 @@ published: true
             </div>
 -->
     </article>
+  {% endif %}
 </div>
 
 <div class="calendar">
